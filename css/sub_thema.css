@@ -1,0 +1,123 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR');
+
+
+/*main-visual*/
+#main-visual .banner {
+	position: relative;
+	width: 100%; 
+	overflow: hidden;
+}
+#main-visual .inner {
+	width: 1000px;
+	margin: 20px auto 0;
+	overflow: hidden;
+}
+#main-visual .inner .subNav {
+	float: right;
+	margin-right: 20px;
+}
+#main-visual .inner .subNav li {
+	float: left;
+	margin-left: 5px;
+	font-size: 12px;
+	color: #868686;
+}
+#main-visual .inner .subNav i {
+	margin-left: 5px;
+	color: #868686;
+}
+#main-visual .inner .subNav span {
+	font-size: 12.5px;
+	line-height: 1;
+	color: #222;
+}
+#main-visual .mainArea .mainTxt {
+	margin-top: 10px;
+}
+#main-visual .mainArea .mainTxt h1 {
+	margin-bottom: 30px;
+	font-size: 40px;
+	font-weight: 600;
+	color: #333;
+}
+#main-visual .tabMenu ul {
+	width: 100%;
+	overflow: hidden;
+	margin: 30px auto;
+	color: #333;
+}
+#main-visual .tabMenu li {
+	float: left;
+	margin: 0 auto;
+	text-align: center;
+	border: 1px solid #dbdbdb;
+}
+#main-visual .tabMenu li a {
+	display: block;
+	padding: 15px 99.8px;
+	box-sizing: border-box;
+	font-weight: 600;
+}
+#main-visual .tabMenu li:nth-child(1) {
+	background: #868686;
+	color: #fff;
+}
+#main-visual .mainArea .mainTxt h3 {
+	clear: both;
+	font-size: 20px;
+	font-weight: 600;
+	margin: 40px 0 20px;
+}
+#main-visual .mainArea .mainTxt p {
+	margin-bottom: 30px;
+	color: #555;
+}
+.swiper-container {
+	width: 1000px;
+	margin-bottom: 40px;
+}
+.swiper-container .swiper-wrapper {
+	width: 100%;
+	background: coral;
+}
+.swiper-container .swiper-slid {
+	width: 1000px;
+}
+.swiper-container .swiper-slid figure {
+	width: 1000px;
+}
+.swiper-container figure img {
+	display: block;
+	width: 100%;
+}
+#main-visual .swiper-button-next {
+	color: #fff;
+}
+#main-visual .swiper-button-prev {
+	color: #fff;
+}
+#main-visual .mainArea table {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+#main-visual .mainArea table th {
+	padding: 10px;
+	font-size: 16px;
+	border-top: 2px solid #e3e3e3;
+	border-bottom: 1px solid #e3e3e3;
+	background: #f6f6f6;
+}
+#main-visual .mainArea table th + th {
+	border-left: 1px solid #e3e3e3;
+}
+#main-visual .mainArea table td {
+	padding: 20px 10px;
+	border-right: 1px solid #e3e3e3;
+	border-bottom: 1px solid #e3e3e3;
+	color: #6d6d6d;
+}
+#main-visual .mainArea table td:last-child {
+	border-right: 0;
+}
