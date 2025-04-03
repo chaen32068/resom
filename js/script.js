@@ -12,10 +12,10 @@ $(document).ready(function () {
 	new Swiper('.main', {
 		effect: 'fade',
 		loop: true,
-		autoplay: {
-			delay: 5000,
-			disableOnInteraction: false
-		},
+		// autoplay: {
+		// 	delay: 5000,
+		// 	disableOnInteraction: false
+		// },
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true,
@@ -24,14 +24,25 @@ $(document).ready(function () {
 	// swiper-main
 
 
-	var swiper = new Swiper('.event', {
-		slidesPerView: 3,
-		spaceBetween: 30,
+	var swiper = new Swiper('.swiper-container.event', {
+		slidesPerView: 3, // 기본적으로 3개 슬라이드 표시
+		spaceBetween: 30, // 슬라이드 간의 간격
 		loop: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		}
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+		breakpoints: {
+			1300: {
+				slidesPerView: 3,
+			},
+			860: {
+				slidesPerView: 2,
+			},
+			485: {
+				slidesPerView: 1,
+			},
+		},
 	});
 	// swiper-event
 
@@ -97,6 +108,25 @@ $(document).ready(function () {
 	});
 	// top button
 
+
+
+	// document.addEventListener('DOMContentLoaded', function () {
+	// 	const fnbLink = document.querySelector('.fnb-link');
+	// 	const linkList = document.querySelector('.link-list');
+
+	// 	fnbLink.addEventListener('click', function (e) {
+	// 		e.preventDefault(); // 기본 링크 동작 방지
+	// 		if (linkList.style.maxHeight) {
+	// 			linkList.style.maxHeight = null; // 숨김
+	// 		} else {
+	// 			linkList.style.maxHeight = linkList.scrollHeight + 'px'; // 현재 높이로 설정하여 보이게 함
+	// 		}
+	// 		fnbLink.classList.toggle('open'); // open 클래스 토글
+	// 	});
+	// });
+
+
+	
 	document.addEventListener('DOMContentLoaded', function () {
 		const fnbLink = document.querySelector('.fnb-link');
 		const linkList = document.querySelector('.link-list');
@@ -129,6 +159,4 @@ $(document).ready(function () {
 		});
 	});
 	//menu-toggle
-
-
 });
