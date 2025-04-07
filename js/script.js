@@ -9,13 +9,13 @@ $(document).ready(function () {
 	// header-nav
 
 
-	new Swiper('.main', {
+	new Swiper('.swiper-container.main', {
 		effect: 'fade',
 		loop: true,
-		autoplay: {
-			delay: 5000,
-			disableOnInteraction: false
-		},
+		// autoplay: {
+		// 	delay: 5000,
+		// 	disableOnInteraction: false
+		// },
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true,
@@ -24,14 +24,25 @@ $(document).ready(function () {
 	// swiper-main
 
 
-	var swiper = new Swiper('.event', {
-		slidesPerView: 3,
-		spaceBetween: 30,
+	var swiper = new Swiper('.swiper-container.event', {
+		slidesPerView: 3, // 기본적으로 3개 슬라이드 표시
+		spaceBetween: 30, // 슬라이드 간의 간격
 		loop: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		}
+		pagination: {
+			// el: '.swiper-pagination',
+			clickable: true,
+		},
+		breakpoints: {
+			1280: {
+				slidesPerView: 3,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			0: {
+				slidesPerView: 1,
+			},
+		},
 	});
 	// swiper-event
 
@@ -97,37 +108,26 @@ $(document).ready(function () {
 	});
 	// top button
 
-	document.addEventListener('DOMContentLoaded', function () {
-		const fnbLink = document.querySelector('.fnb-link');
-		const linkList = document.querySelector('.link-list');
-		const linkItems = document.querySelectorAll('.link-list > a');
 
-		// link-list의 초기 상태 설정
-		linkList.style.maxHeight = '0';
-		linkList.style.overflow = 'hidden';
-		linkList.style.transition = 'max-height 0.3s ease-out'; // 부드러운 애니메이션 효과
 
-		// fnb-link 클릭 시 link-list 토글
-		fnbLink.addEventListener('click', function (e) {
-			e.preventDefault(); // 기본 링크 동작 방지
-			linkList.style.maxHeight = (linkList.style.maxHeight === '0px' || linkList.style.maxHeight === '')
-				? linkList.scrollHeight + 'px' // 현재 높이로 설정하여 보이게 함
-				: '0'; // 숨김
+	// document.addEventListener('DOMContentLoaded', function () {
+	// 	const fnbLink = document.querySelector('.fnb-link');
+	// 	const linkList = document.querySelector('.link-list');
 
-			// open 클래스 토글
-			fnbLink.classList.toggle('open');
-		});
+	// 	fnbLink.addEventListener('click', function (e) {
+	// 		e.preventDefault(); // 기본 링크 동작 방지
+	// 		if (linkList.style.maxHeight) {
+	// 			linkList.style.maxHeight = null; // 숨김
+	// 		} else {
+	// 			linkList.style.maxHeight = linkList.scrollHeight + 'px'; // 현재 높이로 설정하여 보이게 함
+	// 		}
+	// 		fnbLink.classList.toggle('open'); // open 클래스 토글
+	// 	});
+	// });
 
-		// link-list의 각 항목 클릭 시
-		linkItems.forEach(function (item) {
-			item.addEventListener('click', function () {
-				const txt = this.textContent; // 클릭한 항목의 텍스트 가져오기
-				fnbLink.querySelector('a').textContent = txt; // fnb-link의 텍스트 변경
-				linkList.style.maxHeight = '0'; // link-list 숨기기
-				fnbLink.classList.remove('open'); // open 클래스 제거
-			});
-		});
-	});
+
+	
+
 	//menu-toggle
 
 
