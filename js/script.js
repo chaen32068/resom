@@ -145,8 +145,7 @@ $(document).ready(function () {
 	});
 	// top button
 
-
-
+	
 	// document.addEventListener('DOMContentLoaded', function () {
 	// 	const fnbLink = document.querySelector('.fnb-link');
 	// 	const linkList = document.querySelector('.link-list');
