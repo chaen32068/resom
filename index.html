@@ -553,12 +553,10 @@
             const linkList = document.querySelector('.link-list');
             const linkItems = document.querySelectorAll('.link-list > a');
 
-            // 초기 상태 설정
             linkList.style.maxHeight = '0';
             linkList.style.overflow = 'hidden';
             linkList.style.transition = 'max-height 0.3s ease-out';
 
-            // fnbLink 클릭 시 토글 기능
             fnbLink.addEventListener('click', function (e) {
                 e.preventDefault();
                 const isOpen = linkList.style.maxHeight !== '0px' && linkList.style.maxHeight !== '';
@@ -566,7 +564,6 @@
                 fnbLink.classList.toggle('open', !isOpen);
             });
 
-            // 링크 항목 클릭 시 텍스트 업데이트 및 메뉴 닫기
             linkItems.forEach(function (item) {
                 item.addEventListener('click', function () {
                     const txt = this.textContent;
@@ -575,8 +572,7 @@
                     fnbLink.classList.remove('open');
                 });
             });
-
-            // link-list의 a 클릭 시에도 토글 기능 추가
+    
             linkList.addEventListener('click', function (e) {
                 if (e.target.tagName === 'A') {
                     const txt = e.target.textContent;
