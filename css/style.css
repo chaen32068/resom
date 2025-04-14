@@ -121,10 +121,7 @@ header .trigger.active span:nth-child(1) {top: 50%; transform: rotate(45deg);}
 header .trigger.active span:nth-child(2) {opacity: 0;}
 header .trigger.active span:nth-child(3) {top: 50%; transform: rotate(-45deg);}
 
-.m_nav {
-	display: none;
-}
-
+.m_nav {display: none;}
 
 header .tnb-list {
 	display: flex;
